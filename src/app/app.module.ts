@@ -9,6 +9,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     BrowserModule,
     AppRoutingModule,
     ButtonsModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

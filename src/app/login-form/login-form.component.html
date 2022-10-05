@@ -5,17 +5,22 @@
           <div class="card-body">
             <p class="card-text"> 
           </div>  
-          <form class="column"  FormGroup="validation">
+          <form class="column" [ngClass]="{'was-validated': wasValidated}" [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
             <div class="col-md-12 mb-3">
-              <label for="validationDefault01" class="form-label">Username</label>
-              <input type="text" class="form-control" id="validationDefault01" formControlName="Username" required>
+              <label  class="form-label">Username</label>
+              <input type="text" class="form-control"  formControlName="username" required>
             </div>
+            <!-- <div  >
+              <div *ngIf="loginForm.controls['username'].errors" class="error-msg">
+                Please enter username
+              </div>
+            </div> -->
             <div class="col-md-12 mb-3">
-              <label for="validationDefault02" class="form-label">Password</label>
-              <input type="password" class="form-control" id="validationDefault02" formControlName="Password" required>
+              <label  class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password" required>
             </div>
             <div class="col-12">
-              <button class="btn btn-primary" type="submit">Sign in</button>
+              <button class="btn btn-primary" type="submit" (click)="submit()">Sign in</button>
             </div>
             <div class="text-center" >Don't have an account?</div><a routerLink="/register">Sign Up</a>
           </form>

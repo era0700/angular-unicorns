@@ -3,22 +3,22 @@
       <div class="card my-2 px-6 py-4 cb text-center" style="width: 24rem; height:52rem;">
         <img class="card-img-top" src="assets/logo.png" alt="Card image cap">
         <div class="card-body">
-          <form class="column">
+          <form class="column" [ngClass]="{'was-validated': wasValidated}" [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
             <div class="col-md-12 mb-3">
-              <label for="validationDefault01" class="form-label">Full name</label>
-              <input type="text" class="form-control" id="validationDefault01" required>
+              <label  class="form-label">Fullname</label>
+              <input type="text" class="form-control" formControlName="fullname" required>
             </div>
             <div class="col-md-12 mb-3">
-              <label for="validationDefault02" class="form-label">Username</label>
-              <input type="text" class="form-control" id="validationDefault02" required>
+              <label  class="form-label">Username</label>
+              <input type="text" class="form-control" formControlName="username" required>
             </div>
             <div class="col-md-12 mb-3">
-              <label for="validationDefault03" class="form-label">Email</label>
-              <input type="email" class="form-control" id="validationDefault03" required>
+              <label  class="form-label">Email</label>
+              <input type="email" class="form-control" formControlName="email" required>
             </div>
             <div class="col-md-12 mb-3">
-              <label for="validationDefault04" class="form-label">Password</label>
-              <input type="password" class="form-control" id="validationDefault04" required>
+              <label  class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password" required>
             </div>
             <div class="col-12 mb-3">
               <div class="form-check">
@@ -29,11 +29,10 @@
               </div>
             </div>
             <div class="col-12 mb-3">
-              <button class="btn btn-primary" type="submit">Sign up</button>
+              <button class="btn btn-primary" type="submit" (click)="submit()">Sign up</button>
             </div>
           <div class="text-center" >Already a uniqueorn?</div><a routerLink="/login">Sign In</a>
           </form>
-        </div>
       </div>
     </div>
   </div>

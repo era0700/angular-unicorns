@@ -8,7 +8,8 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 const routes: Routes = [
     {
         path: '',
-        component: DashboardComponent,
+        redirectTo: 'login',
+        pathMatch: 'full'
     },
     {
         path: 'login',

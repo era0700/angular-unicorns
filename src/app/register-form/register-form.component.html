@@ -3,10 +3,10 @@
       <div class="card my-2 px-6 py-4 cb text-center" style="width: 24rem; height:52rem;">
         <img class="card-img-top" src="assets/logo.png" alt="Card image cap">
         <div class="card-body">
-          <form class="column" [ngClass]="{'was-validated': wasValidated}" [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
+          <form class="column" [ngClass]="{'was-validated': wasValidated}" [formGroup]="registerForm">
             <div class="col-md-12 mb-3">
               <label  class="form-label">Fullname</label>
-              <input type="text" class="form-control" formControlName="fullname" required>
+              <input type="text" class="form-control" formControlName="fullName" required>
             </div>
             <div class="col-md-12 mb-3">
               <label  class="form-label">Username</label>
@@ -29,7 +29,7 @@
               </div>
             </div>
             <div class="col-12 mb-3">
-              <button class="btn btn-primary" type="submit" (click)="submit()">Sign up</button>
+              <button class="btn btn-primary" type="submit" (click)="submit()"  [disabled]="disableButton">Sign up</button>
             </div>
           <div class="text-center" >Already a uniqueorn?</div><a routerLink="/login">Sign In</a>
           </form>

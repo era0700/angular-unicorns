@@ -13,13 +13,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterFormComponent,
     LoginFormComponent,
-    DashboardComponent
+    DashboardComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

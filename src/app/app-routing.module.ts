@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'login',
-        pathMatch: 'full'
+        component: LandingPageComponent,
     },
     {
         path: 'login',
@@ -19,6 +19,7 @@ const routes: Routes = [
         path: 'register',
         component: RegisterFormComponent,
     },
+
 ];
 
 

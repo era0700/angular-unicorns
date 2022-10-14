@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.css",
               "src/assets/styles/custom-responsive-styles.css",
-              "src/assets/styles/landing-styles.css"
+              "src/assets/styles/landing-styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ]
           },
           "configurations": {

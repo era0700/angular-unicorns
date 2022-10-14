@@ -65,3 +65,17 @@ body{
       font-family:georgia,garamond,serif;
       border-color: #04011396;
      }
+     .logo{
+         margin-left: 36%;
+         width:35%;
+     }
+     
+     h1{
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-family: sans-serif;
+        font-size: 6rem;
+        background: linear-gradient(to right, #e01f1b, #e75183, #b088f7, #369ff5, #02b6ce, #50e958, #e9f83e, #ffa515, #f0592c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }

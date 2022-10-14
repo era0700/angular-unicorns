@@ -4,7 +4,7 @@
     padding-top: 70px;
     padding-bottom: 70px;
   }
-  .logo i {
+  .logo{
     font-size: 40px;
   }
   #Banner .content-wrap h1 {
@@ -145,7 +145,8 @@
     font-size: 40px;
   }
   #Banner .content-wrap h3 {
-    font-size: 24px;
+    font-size: 16px;
+
   }
   .btn-xl {
     padding: 20px 30px;
@@ -182,4 +183,16 @@
   height: 100vh;
   background: linear-gradient(274deg, hsl(183deg 30% 70%), hsl(240deg 30% 80%) 44%, hsl(281deg 35% 80%));
   color: #fff;
+}
+.menu-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: whitesmoke;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 50px;
+  z-index: 999;
 }

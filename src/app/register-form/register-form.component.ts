@@ -33,6 +33,11 @@ export class RegisterFormComponent implements OnInit {
     if (this.registerForm.invalid) return;
     this.disableButton = true;
     const user = this.registerForm.getRawValue();
+
+    // (1) Auth user
+    // (2) Store data in firestore
+    //    (2.1) Paraprakisht hiq password
+
     this.firestoreService.registerUser(user)
     .then(() => {
       this.router.navigate(['login']);

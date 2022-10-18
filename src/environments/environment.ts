@@ -10,7 +10,7 @@ export const environment = {
     locationId: 'europe-west',
     apiKey: 'AIzaSyAJBxR7H96PbjFsYmN83rKACprlE8yeSiY',
     authDomain: 'angular-uniqueorns.firebaseapp.com',
-    messagingSenderId: '879596367099',
+    messagingSenderId: '879596367099'
   },
   production: false
 };

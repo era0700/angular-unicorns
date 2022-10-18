@@ -13,7 +13,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AuthService } from './services/auth.service';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { CreatePostsComponent } from './create-posts/create-posts.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     RegisterFormComponent,
     LoginFormComponent,
     DashboardComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CreatePostsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +35,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
   ],
-  providers: [],
+  providers: [AuthService, { provide: FIREBASE_OPTIONS, useValue: environment.firebase }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
+import { CreatePostsComponent } from './create-posts/create-posts.component';
 
 const routes: Routes = [
     {
@@ -24,6 +25,11 @@ const routes: Routes = [
         path: 'register',
         component: RegisterFormComponent,
     },
+    {
+        path: 'create-post',
+        component: CreatePostsComponent,
+
+    }
 
 ];
 

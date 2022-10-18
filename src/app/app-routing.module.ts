@@ -5,11 +5,16 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserPostsComponent } from './user-posts/user-posts.component';
 
 const routes: Routes = [
     {
         path: '',
         component: LandingPageComponent,
+    },
+    {
+        path: 'user',
+        component: UserPostsComponent,
     },
     {
         path: 'login',
@@ -21,7 +26,6 @@ const routes: Routes = [
     },
 
 ];
-
 
 @NgModule({
   declarations: [],

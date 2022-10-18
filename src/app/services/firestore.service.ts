@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Firestore, addDoc, collection, DocumentReference } from '@angular/fire/firestore';
+import { Firestore, setDoc, doc, addDoc, collection } from '@angular/fire/firestore';
+import { User } from '../models/user.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,12 @@ export class FirestoreService {
 
   constructor(private firestore: Firestore) { }
 
-  registerUser(user: any): Promise<DocumentReference> {
-    return addDoc(collection(this.firestore, "users"), user);
+  storeUser(user: User): Promise<void> {
+    const userDocRef = doc(this.firestore, `users/${user.uid}`);
+    return setDoc(userDocRef, user);
+  }
+
+  storeFeedback(feedback: any) {
+    return addDoc(collection(this.firestore, "feedback"), feedback);
   }
 }

@@ -1,0 +1,7 @@
+.was-validated > .floating-label > .floating-input:invalid + label {
+    color: rgb(245, 92, 92) !important;
+}
+
+.was-validated > .floating-label > .floating-input:invalid {
+    border-color: rgb(245, 92, 92) !important;
+}

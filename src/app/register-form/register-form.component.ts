@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class RegisterFormComponent implements OnInit {
 
   constructor(
     private firestoreService: FirestoreService,
+    private authService: AuthService,
     private router: Router
   ) {
     this.registerForm = new FormGroup({
@@ -34,17 +36,17 @@ export class RegisterFormComponent implements OnInit {
     this.disableButton = true;
     const user = this.registerForm.getRawValue();
 
-    // (1) Auth user
-    // (2) Store data in firestore
-    //    (2.1) Paraprakisht hiq password
+    this.authService
+    .signin(user.email, user.password)
+    .then((userCredential) => {
+      delete user.password; 
+      user.uid = userCredential.user?.uid;
 
-    this.firestoreService.registerUser(user)
-    .then(() => {
-      this.router.navigate(['login']);
+      this.firestoreService.storeUser(user)
+      .then(() => {
+        this.router.navigate(['login']);
+      })
     })
-    .finally(() => {
-      this.registerForm.reset();
-    });
-    
+  
   }
 }

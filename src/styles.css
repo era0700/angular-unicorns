@@ -7,44 +7,6 @@ body{
     margin-top: 70px;
     }
     
-    .card{
-        width:90%;
-        max-width: 400px;
-        border-radius:1.5rem ;
-        border: 1px solid transparent;
-        backdrop-filter: blur(1rem);
-        box-shadow: 1.3rem 1.3rem 1.3rem rgba(0 0 0 0.5);
-        border-color:rgba(115, 159, 241, 0.5) ;
-        margin: 0 auto;
-        margin-bottom: 10px;
-    }
-  
-     .input:focus {
-      border-color: #8A6FF7;
-     }
-  
-    .cb{
-        background-color: rgba(78, 119, 255, 0.219);
-    }
-    
-    .btn{
-        border-radius: 2rem;
-        color: #ffffff;
-        font-family: georgia,garamond,serif;
-        margin-top: 16px;
-    }
-    
-    .btn:hover{
-        box-shadow: 0 0.3rem 1rem rgba(243, 139, 238, 0.664);
-    }
-    
-   
-    
-    img{
-        width: 70%;
-        
-    }
-  
   
      .card-body{
       margin-bottom: 18px;
@@ -52,14 +14,7 @@ body{
       margin-top: 50px;
      }
      
-     .card-img-top{
-      width: 65%;
-      border-radius: 50%;
-      margin: 0 auto;
-      box-shadow: 0 0 10px rgba(3, 17, 214, 0.164);
-     }
-     
-     /* .column{
+      .column{
       padding-bottom:5px;
       margin-bottom:10px; 
       font-family:georgia,garamond,serif;
@@ -78,4 +33,4 @@ body{
         background: linear-gradient(to right, #e01f1b, #e75183, #b088f7, #369ff5, #02b6ce, #50e958, #e9f83e, #ffa515, #f0592c);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        } */
+        } 

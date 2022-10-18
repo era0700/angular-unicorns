@@ -1,0 +1,40 @@
+.card{
+    width:90%;
+    max-width: 400px;
+    border-radius:1.5rem ;
+    border: 1px solid transparent;
+    backdrop-filter: blur(1rem);
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0 0 0 0.5);
+    border-color:rgba(115, 159, 241, 0.5) ;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.cb{
+    background-color: rgba(78, 119, 255, 0.219);
+}
+
+.btn{
+    border-radius: 2rem;
+    color: #ffffff;
+    font-family: georgia,garamond,serif;
+    margin-top: 16px;
+}
+
+.btn:hover{
+    box-shadow: 0 0.3rem 1rem rgba(243, 139, 238, 0.664);
+}
+img{
+    width: 70%;
+    
+}
+.input:focus {
+    border-color: #8A6FF7;
+   }
+   
+   .card-img-top{
+    width: 65%;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(3, 17, 214, 0.164);
+   }
+   

@@ -17,4 +17,6 @@ export class AuthService {
   async signup(email: string , password : string) {
     return await this.auth.createUserWithEmailAndPassword(email, password);
   }
+
+ 
 }

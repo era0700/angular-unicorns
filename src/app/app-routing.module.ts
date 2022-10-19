@@ -28,6 +28,10 @@ const routes: Routes = [
         path: 'create-post',
         component: CreatePostsComponent,
 
+    },
+    {
+        path: 'posts',
+        component: UserPostsComponent,
     }
 
 ];

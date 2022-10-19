@@ -18,6 +18,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AuthService } from './services/auth.service';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { CreatePostsComponent } from './create-posts/create-posts.component';
+import { UserPostsComponent } from './user-posts/user-posts.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CreatePostsComponent } from './create-posts/create-posts.component';
     LoginFormComponent,
     DashboardComponent,
     LandingPageComponent,
-    CreatePostsComponent
+    CreatePostsComponent,
+    UserPostsComponent
   ],
   imports: [
     BrowserModule,

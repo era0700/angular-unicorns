@@ -5,3 +5,7 @@
 .was-validated > .floating-label > .floating-input:invalid {
     border-color: rgb(245, 92, 92) !important;
 }
+
+.logo > img {
+    max-width: 256px;
+}

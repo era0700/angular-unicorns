@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { FirestoreService } from 'src/app/services/firestore.service';
+import { AuthService } from '../services/auth.service';
 
 
 
@@ -11,8 +14,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginFormComponent implements OnInit {
   loginForm!: FormGroup;
   wasValidated = false;
+  disableButton = false;
 
-  constructor() {
+  constructor(
+    private firestoreService: FirestoreService,
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.loginForm = new FormGroup({
       username: new FormControl(null, Validators.required),
       password:new FormControl(null,Validators.required)
@@ -25,8 +33,15 @@ export class LoginFormComponent implements OnInit {
 
   submit(){
     this.wasValidated = true;
-    console.log(this.loginForm.getRawValue(),'::value::');
+    if (this.loginForm.invalid) return;
+    this.disableButton = true;
+    const user = this.loginForm.getRawValue();
+
+    this.authService
+    .signin(user.email, user.password)
+
   }
+  
 
   onSubmit() {
     console.log(this.loginForm.value);

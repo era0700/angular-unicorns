@@ -37,7 +37,7 @@ export class RegisterFormComponent implements OnInit {
     const user = this.registerForm.getRawValue();
 
     this.authService
-    .signin(user.email, user.password)
+    .signup(user.email, user.password)
     .then((userCredential) => {
       delete user.password; 
       user.uid = userCredential.user?.uid;
@@ -46,6 +46,10 @@ export class RegisterFormComponent implements OnInit {
       .then(() => {
         this.router.navigate(['login']);
       })
+    })
+    .catch((error) => {
+      //
+      this.disableButton = false;
     })
   
   }

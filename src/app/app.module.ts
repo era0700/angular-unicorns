@@ -19,6 +19,7 @@ import { AuthService } from './services/auth.service';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { CreatePostsComponent } from './create-posts/create-posts.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

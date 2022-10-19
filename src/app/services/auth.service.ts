@@ -13,4 +13,8 @@ export class AuthService {
   async signin(email: string , password : string): Promise<firebase.auth.UserCredential> {
     return await this.auth.signInWithEmailAndPassword(email, password);
   }
+
+  async signup(email: string , password : string) {
+    return await this.auth.createUserWithEmailAndPassword(email, password);
+  }
 }

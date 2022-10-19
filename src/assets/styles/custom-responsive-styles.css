@@ -182,8 +182,11 @@
 #Banner {
   position: relative;
   height: 100vh;
-  background: linear-gradient(274deg, hsl(183deg 30% 70%), hsl(240deg 30% 80%) 44%, hsl(281deg 35% 80%));
+  background-image: url('/assets/images/city1.gif');
   color: #fff;
+  background-repeat: no-repeat;
+  justify-content: center;
+  background-size: cover;
 }
 .menu-toggle{
   position: fixed;

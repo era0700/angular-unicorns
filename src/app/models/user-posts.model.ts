@@ -4,4 +4,5 @@ export interface UserPost {
   title: string;
   content: string;
   createdDate: Timestamp;
+  file: string;
 }

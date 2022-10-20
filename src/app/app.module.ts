@@ -21,6 +21,7 @@ import { CreatePostsComponent } from './create-posts/create-posts.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
     DashboardComponent,
     LandingPageComponent,
     CreatePostsComponent,
-    UserPostsComponent
+    UserPostsComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
-                    NEW DISCUSSION
+                    <a routerLink="/create-post">NEW DISCUSSION</a>
                 </button>
             </div>
             <!-- /Inner sidebar header -->
@@ -78,7 +78,7 @@
                                 <p class="text-secondary">
                                    {{post.content}}
                                 </p>
-                                <p class="text-muted"> <span class="text font-weight-bold">{{post.createdDate.toDate() | date:'yyyy/MM/dd h:mm:ss a'}}</span></p>
+                                <p class="text-muted"> <span class="text font-weight-bold">{{post.createdDate}}</span></p>
                             </div>
                            
                         </div>

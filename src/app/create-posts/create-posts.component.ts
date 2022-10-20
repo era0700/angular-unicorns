@@ -5,6 +5,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 import { AuthService } from '../services/auth.service';
 
 
+
 @Component({
   selector: 'app-create-posts',
   templateUrl: './create-posts.component.html',
@@ -22,7 +23,8 @@ export class CreatePostsComponent implements OnInit {
   ) { 
     this.createpostsForm = new FormGroup({
       title: new FormControl(null, Validators.required),
-      content:new FormControl(null,Validators.required)
+      content:new FormControl(null,Validators.required),
+      file: new FormControl(null,Validators.required)
 })
   }
 
@@ -35,12 +37,15 @@ export class CreatePostsComponent implements OnInit {
     if (this.createpostsForm.invalid) return;
     this.disableButton = true;
     const user = this.createpostsForm.getRawValue();
+    const createdDate = new Date(Date.now()).toLocaleString();
+    console.log(user.file)
+    
    
 
-    this.firestoreService
-    .createPosts(user.title, user.content).then(() => {
+     this.firestoreService
+     .createPosts(user.title, user.content, createdDate, user.file).then(() => {
       this.router.navigate(['posts']);
-    })
+     })
 
   }
 }

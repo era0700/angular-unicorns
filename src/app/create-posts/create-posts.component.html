@@ -19,13 +19,6 @@
     		    </div>
     		    
     		    <div class="form-group">
-    		        <p><span class="require">*</span> required fields</p>
-    		    </div>
-                <label for="myfile">Select a file:</label>
-                <input type="file" id="myfile" name="myfile" class="form-control" formControlName="file" ><br><br>
-    		    
-    		    <div class="form-group">
-					<app-file-upload formControlName="image"></app-file-upload>
     		        <button type="submit" class="btn btn-primary" (click)="submit()"  [disabled]="disableButton">
     		            Create
     		        </button>

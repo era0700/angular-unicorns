@@ -18,12 +18,12 @@ export class FirestoreService {
   storeFeedback(feedback: any) {
     return addDoc(collection(this.firestore, "feedback"), feedback);
   }
-  createPosts(title: string, content: string, date: string, file:string) {
+  createPosts(title: string, content: string, date: string,) {
     let postData = {
       title: title,
       content: content,
       createdDate: date,
-      file: file,
+    
     }
     return addDoc(collection(this.firestore, "posts"), postData)
   }

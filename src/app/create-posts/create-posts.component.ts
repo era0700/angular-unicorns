@@ -24,7 +24,6 @@ export class CreatePostsComponent implements OnInit {
     this.createpostsForm = new FormGroup({
       title: new FormControl(null, Validators.required),
       content:new FormControl(null,Validators.required),
-      file: new FormControl(null,Validators.required)
 })
   }
 
@@ -38,12 +37,12 @@ export class CreatePostsComponent implements OnInit {
     this.disableButton = true;
     const user = this.createpostsForm.getRawValue();
     const createdDate = new Date(Date.now()).toLocaleString();
-    console.log(user.file)
+    
     
    
 
      this.firestoreService
-     .createPosts(user.title, user.content, createdDate, user.file).then(() => {
+     .createPosts(user.title, user.content, createdDate,).then(() => {
       this.router.navigate(['posts']);
      })
 

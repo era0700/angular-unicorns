@@ -7,6 +7,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { CreatePostsComponent } from './create-posts/create-posts.component';
+
 const routes: Routes = [
     {
         path: '',
@@ -32,18 +33,22 @@ const routes: Routes = [
     {
         path: 'posts',
         component: UserPostsComponent,
+    },
+    {
+        path: '',
+        component:UserPostsComponent,
+       
     }
+    ];
 
-];
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-    ],
-    exports: [
-        RouterModule
-    ],
-})
-export class AppRoutingModule { }
+    @NgModule({
+    declarations: [],
+    imports: [
+        CommonModule,
+        RouterModule.forRoot(routes)
+        ],
+        exports: [
+            RouterModule
+        ],
+    })
+    export class AppRoutingModule { }

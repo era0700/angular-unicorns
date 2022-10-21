@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
+
 import { AppComponent } from './app.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -19,6 +20,8 @@ import { AuthService } from './services/auth.service';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { CreatePostsComponent } from './create-posts/create-posts.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
+
+
 
 
 

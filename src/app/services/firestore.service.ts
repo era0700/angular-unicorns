@@ -15,6 +15,8 @@ export class FirestoreService {
     return setDoc(userDocRef, user);
   }
 
+  
+
   storeFeedback(feedback: any) {
     return addDoc(collection(this.firestore, "feedback"), feedback);
   }

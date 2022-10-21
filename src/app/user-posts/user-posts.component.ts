@@ -2,13 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Firestore, collection, query, getDocs } from '@angular/fire/firestore';
 import { UserPost } from '../models/user-posts.model';
 
+
+
+
 @Component({
   selector: 'app-user-posts',
   templateUrl: './user-posts.component.html',
   styleUrls: ['./user-posts.component.css']
 })
 export class UserPostsComponent implements OnInit {
-  posts: Array<UserPost> = [];
+  posts: Array<UserPost> = []; 
   constructor(private db: Firestore) { }
 
   ngOnInit(): void { 

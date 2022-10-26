@@ -43,7 +43,7 @@ export class CreatePostsComponent implements OnInit {
 
      this.firestoreService
      .createPosts(user.title, user.content, createdDate,).then(() => {
-      this.router.navigate(['posts']);
+      this.router.navigateByUrl('/posts');
      })
 
   }

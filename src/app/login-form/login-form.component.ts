@@ -15,36 +15,44 @@ export class LoginFormComponent implements OnInit {
   loginForm!: FormGroup;
   wasValidated = false;
   disableButton = false;
+  currentuser:any;
 
   constructor(
-    private firestoreService: FirestoreService,
     private authService: AuthService,
+    private firestoreService: FirestoreService,
     private router: Router
-  ) {
+    ) 
+    {
     this.loginForm = new FormGroup({
-      username: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required,Validators.email]),
       password:new FormControl(null,Validators.required)
 })
    }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   submit(){
-    this.wasValidated = true;
+    if(this.loginForm.valid) {
+      this.wasValidated = true;
+    }
     if (this.loginForm.invalid) return;
     this.disableButton = true;
     const user = this.loginForm.getRawValue();
-
+    
     this.authService
     .signin(user.email, user.password)
-
-  }
+    .then((userCredential) => { 
+      user.uid = userCredential.user?.uid;
+      this.router.navigateByUrl('/create-post');
+    })
+    .catch((error) => {
+      //
+      this.disableButton = false;
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    })
   
-
-  onSubmit() {
-    console.log(this.loginForm.value);
+  
   }
 
 }

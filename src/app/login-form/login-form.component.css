@@ -36,4 +36,7 @@ img{
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(3, 17, 214, 0.164);
    }
-   
+   .error-msg{
+    color: red;
+    font-size: small;
+   }

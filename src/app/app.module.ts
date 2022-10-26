@@ -10,7 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
@@ -37,6 +37,7 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     ButtonsModule.forRoot(),
     ReactiveFormsModule,

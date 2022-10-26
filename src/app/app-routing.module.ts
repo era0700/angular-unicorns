@@ -11,7 +11,7 @@ import { CreatePostsComponent } from './create-posts/create-posts.component';
 const routes: Routes = [
     {
         path: '',
-        component: LandingPageComponent,
+       component: LandingPageComponent,
     },
     {
         path: 'user',
@@ -34,11 +34,6 @@ const routes: Routes = [
         path: 'posts',
         component: UserPostsComponent,
     },
-    {
-        path: '',
-        component:UserPostsComponent,
-       
-    }
     ];
 
     @NgModule({

@@ -25,6 +25,7 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
     LandingPageComponent,
     CreatePostsComponent,
     UserPostsComponent,
+    
   ],
   imports: [
     BrowserModule,

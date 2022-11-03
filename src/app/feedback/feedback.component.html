@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="block-heading">
+    <h2>Feedback</h2>
+    <p>Please let us know about your experience at Uniqueorns.</p>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="contact-wrapper">
+        <div class="address-block border-bottom">
+          <h3 class="add-title">Headquaters</h3>
+          <div class="c-detail">
+            <span class="c-icon"
+              ><i class="fa fa-map-marker" aria-hidden="true"></i></span
+            ><span class="c-info">Unicorns street</span>
+          </div>
+          <div class="c-detail">
+            <span class="c-icon"
+              ><i class="fa fa-phone" aria-hidden="true"></i></span
+            ><span class="c-info">+16034134124</span>
+          </div>
+          <div class="c-detail">
+            <span class="c-icon"
+              ><i class="fa fa-envelope" aria-hidden="true"></i></span
+            ><span class="c-info">unicorns@unicorns.com</span>
+          </div>
+        </div>
+        <div class="address-block">
+          <h3 class="add-title">Branch</h3>
+          <div class="c-detail">
+            <span class="c-icon"
+              ><i class="fa fa-map-marker" aria-hidden="true"></i></span
+            ><span class="c-info"> Uniqueorns Street</span>
+          </div>
+          <div class="c-detail">
+            <span class="c-icon"
+              ><i class="fa fa-phone" aria-hidden="true"></i></span
+            ><span class="c-info">+6054756964</span>
+          </div>
+          <div class="c-detail">
+            <span class="c-icon"
+              ><i class="fa fa-envelope" aria-hidden="true"></i></span
+            ><span class="c-info">unicorns@unicorns.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="form-wrap">
+        <form
+          method="post"
+          [ngClass]="{ 'was-validated': wasValidated }"
+          [formGroup]="feedbackForm"
+        >
+          <div class="fname floating-label">
+            <input
+              type="text"
+              class="floating-input"
+              name="fullName"
+              formControlName="fullName"
+              required
+            />
+            <label for="title">Full Name</label>
+          </div>
+          <div class="email floating-label">
+            <input
+              type="email"
+              class="floating-input"
+              name="email"
+              formControlName="email"
+              required
+            />
+            <label for="email">Email</label>
+          </div>
+          <div class="company floating-label">
+            <textarea
+              type="text"
+              class="floating-input"
+              name="message"
+              formControlName="message"
+              required
+            ></textarea>
+            <label for="email">Message</label>
+          </div>
+          <div class="submit-btn">
+            <button type="submit" (click)="submit()" [disabled]="disableButton">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

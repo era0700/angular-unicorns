@@ -7,6 +7,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { CreatePostsComponent } from './create-posts/create-posts.component';
+import { UsersFeedbackComponent } from './users-feedback/users-feedback.component';
 
 const routes: Routes = [
     {
@@ -29,6 +30,10 @@ const routes: Routes = [
         path: 'create-post',
         component: CreatePostsComponent,
 
+    },
+    {
+        path:'feedbacks',
+        component:UsersFeedbackComponent
     },
     {
         path: 'posts',

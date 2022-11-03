@@ -20,6 +20,8 @@ import { AuthService } from './services/auth.service';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { CreatePostsComponent } from './create-posts/create-posts.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { UsersFeedbackComponent } from './users-feedback/users-feedback.component';
 
 
 
@@ -35,6 +37,8 @@ import { UserPostsComponent } from './user-posts/user-posts.component';
     LandingPageComponent,
     CreatePostsComponent,
     UserPostsComponent,
+    FeedbackComponent,
+    UsersFeedbackComponent,
     
   ],
   imports: [

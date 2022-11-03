@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './create-posts.component.html',
   styleUrls: ['./create-posts.component.css']
 })
-export class CreatePostsComponent implements OnInit {
+export class CreatePostsComponent implements OnInit { 
   createpostsForm!: FormGroup
   disableButton = false;
   wasValidated = false;

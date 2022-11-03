@@ -37,7 +37,7 @@ export class FeedbackComponent implements OnInit {
     this.disableButton = true;
     const user = this.feedbackForm.getRawValue(); 
     this.firestoreService
-    .feedback(user.message,user.email,user.fullName).then(() => {
+    .storeFeedback(user.message,user.email,user.fullName).then(() => {
       this.router.navigateByUrl('/feedbacks')
     })
   }

@@ -34,17 +34,12 @@ const routes: Routes = [
     },
     {
         path:'feedbacks',
-        component:UsersFeedbackComponent
+        component:UsersFeedbackComponent,
     },
     {
         path: 'posts',
         component: UserPostsComponent,
     },
-    {
-        path:'feedback',
-        component: FeedbackComponent,
-    }
-
     ];
 
     @NgModule({

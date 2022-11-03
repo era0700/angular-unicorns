@@ -18,8 +18,14 @@ export class FirestoreService {
 
   
 
-  storeFeedback(feedback: any) {
+  storeFeedback(message: string, email: string, fullName: string) {
+    let feedback = {
+      email: email,
+      message: message,
+      fullName: fullName,
+    }
     return addDoc(collection(this.firestore, "feedback"), feedback);
+
   }
   createPosts(title: string, content: string, date: string,) {
     let postData = {
@@ -32,5 +38,8 @@ export class FirestoreService {
   }
    getPosts(){
     return doc(this.firestore, "posts")
+   }
+   getFeedbacks(){
+    return doc(this.firestore,"feedbacks")
    }
 }

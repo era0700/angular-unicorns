@@ -32,7 +32,6 @@ export class CreatePostsComponent implements OnInit {
   }
   submit(){
     this.wasValidated = true;
-    console.log('hello')
     if (this.createpostsForm.invalid) return;
     this.disableButton = true;
     const user = this.createpostsForm.getRawValue();

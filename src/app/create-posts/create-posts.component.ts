@@ -37,9 +37,6 @@ export class CreatePostsComponent implements OnInit {
     this.disableButton = true;
     const user = this.createpostsForm.getRawValue();
     const createdDate = new Date(Date.now()).toLocaleString();
-    
-    
-   
 
      this.firestoreService
      .createPosts(user.title, user.content, createdDate,).then(() => {

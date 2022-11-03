@@ -7,6 +7,7 @@ import { User } from '../models/user.model';
   providedIn: 'root'
 })
 export class FirestoreService {
+  feedback: any;
 
   constructor(private firestore: Firestore) { }
 

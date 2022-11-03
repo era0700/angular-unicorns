@@ -8,6 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { CreatePostsComponent } from './create-posts/create-posts.component';
 import { UsersFeedbackComponent } from './users-feedback/users-feedback.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 const routes: Routes = [
     {
@@ -39,6 +40,11 @@ const routes: Routes = [
         path: 'posts',
         component: UserPostsComponent,
     },
+    {
+        path:'feedback',
+        component: FeedbackComponent,
+    }
+
     ];
 
     @NgModule({

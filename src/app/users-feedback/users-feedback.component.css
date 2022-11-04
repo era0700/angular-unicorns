@@ -19,7 +19,7 @@
   font-weight: 300;
 }
 #customers-testimonials .testimonial-name {
-  margin: -17px auto 0;
+  margin: -42px auto 0;
   display: table;
   width: auto;
   background-color: #02ccba;
@@ -55,6 +55,7 @@
   background: #28CB75;
   transform: translate3d(0px, -50%, 0px) scale(0.7);
 }
+
 #customers-testimonials.owl-carousel.owl-theme .owl-dots .owl-dot span {
   background: #C4C4CC;
   display: block;
@@ -92,4 +93,5 @@
 .owl-prev:focus, .owl-next:focus {
 	outline: 0;
 	border: 0;
+
 }

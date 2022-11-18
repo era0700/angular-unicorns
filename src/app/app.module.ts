@@ -28,6 +28,7 @@ import { UsersFeedbackComponent } from './users-feedback/users-feedback.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { UsersFeedbackComponent } from './users-feedback/users-feedback.componen
     UserPostsComponent,
     FeedbackComponent,
     UsersFeedbackComponent,
+    
     
   ],
   imports: [

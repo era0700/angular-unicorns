@@ -1,8 +1,8 @@
 /*Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575px) {
+@media (max-width: 25px) {
   .content-section {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .logo{
     font-size: 40px;

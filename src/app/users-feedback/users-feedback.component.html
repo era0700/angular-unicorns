@@ -1,19 +1,36 @@
+<h1>Our amazing people</h1>
+
+<!-- <div class="container">
+        <div class="faders">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div class="items" *ngFor="let feedback of feedback">
+            <div class="entry">
+              <p class="name">{{feedback.fullName}}</p> 
+              <img class="img" src="assets/svgs/rreth.svg" alt="">
+                <p>{{feedback.message}}</p>
+            </div>  
+          
+        </div>
+    </div>
+     -->
 <div class="container">
-    <div class="row">
-      <div class="col-sm-12" >
-        <div class="block-heading">
-          <h2>Users Feedback ♡</h2>
-          <p>Your experience matters!</p>
-        </div>
-        <div id="customers-testimonials" class="owl-carousel">
-          <div class="item" *ngFor="let feedback of feedback">
-            <div class="shadow-effect">
-              <img class="img-circle" src="assets/images/sarah.jpg" alt="">
-              <p>{{feedback.message}}</p>
-            </div>
-            <div class="testimonial-name">{{feedback.fullName}}</div>  
-          </div>
-        </div>
-      </div>
+  <div class="faders">
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+
+  <div class="items">
+    <div class="entry" *ngFor="let feedback of feedback">
+      <p class="name">{{feedback.fullName}}</p>
+      <img
+        src="https://picsum.photos/80"
+        alt="Smiling chick"
+      />
+      <p class="quote">
+        {{feedback.message}}
+      </p>
     </div>
   </div>
+</div>

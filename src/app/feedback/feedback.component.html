@@ -78,8 +78,10 @@
               name="message"
               formControlName="message"
               required
+              minlength="10" 
+              maxlength="20"
             ></textarea>
-            <label for="email">Message</label>
+            <label for="message">Message</label>
           </div>
           <div class="submit-btn">
             <button type="submit" (click)="submit()" [disabled]="disableButton">

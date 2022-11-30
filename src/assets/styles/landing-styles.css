@@ -123,11 +123,13 @@ span {
 }
 #Services {
   background-color: #fafafa;
+  padding-top: 30px;
 }
 #Services .service-box {
   position: relative;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   perspective: 1000px;
   -webkit-perspective: 1000px;
 }
